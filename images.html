@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Google Images</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css"/>
+        <script src="myScript.js"></script>
+        <style>
+            nav {
+                justify-content: flex-end;
+            }
+            .content {
+                margin-top: 150px;
+            }
+            #logo {
+                height: 115px;
+                width: auto;
+            }
+            .searchbar input {
+                width: 550px;
+            }
+            .left-icons {
+                display: flex;
+                align-items: center;
+            }
+            .left-icons img {
+                height: 18px;
+                width: auto;
+                padding-right: 20px;
+            }
+            #images-magnifier {
+                height: 22px;
+                width: auto;
+                pointer-events: auto;
+            }
+            #images-magnifier:focus {
+                outline: none;
+            }
+            footer {
+                height: 40px;;
+            }
+            @media (max-width: 650px) {
+                footer {
+                    height: 90px;
+                }
+                .links {
+                    justify-content: center;
+                }
+            }
+            </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Google Search</a></li>
+                    <li><a href=""><img id="grid"
+                                src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png"
+                                title="Google apps"></a></li>
+                    <li><button type="button" class="btn btn-primary btn-sm">Sign in</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="content">
+            <form action="https://google.com/search?">
+                <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Google_Images_Logo.png" title="Google Images" alt="Google Images">
+                <div class="searchbar">
+                    <input class="search-bar" type="text" name="q" required>
+                    <input type="hidden" name="tbm" value="isch" />
+                    <div class="icons">
+                        <img id="magnifier" src="https://upload.wikimedia.org/wikipedia/commons/2/22/Google_Magnifying_Glass.svg">                        
+                        <div class="left-icons">
+                            <img id="camera" src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Camera_%28766%29_-_The_Noun_Project.svg" title="Search by image">
+                            <img id="images-voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by voice">
+                            <input id="images-magnifier" type="image" src="images-magnifier.png" alt="Submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </main>
+
+        <footer>
+            <div class="links">
+                <ul class="left-footer">
+                    <li><a href="https://ads.google.com">Advertising</a></li>
+                    <li><a href="https://smallbusiness.withgoogle.com">Business</a></li>
+                    <li><a href="https://about.google/">About</a></li>
+                    <li><a href="https://www.google.com/search/howsearchworks">How Search works</a></li>
+                </ul>
+                <ul class="right-footer">
+                    <li><a href="https://policies.google.com">Privacy</a></li>
+                    <li><a href="https://policies.google.com">Terms</a></li>
+                    <li><a onclick="myFunction()" href='#'>Settings</a></li>
+                    <div class="dropup">
+                        <div class="dropup-content-images" id="dropup-content">
+                          <a href="https://www.google.com/preferences">Search settings</a>
+                          <a href="advanced.html">Advanced search</a>
+                          <a href="https://myactivity.google.com/item">Search history</a>
+                          <a href="https://support.google.com/websearch">Search help</a>
+                          <a href="#">Send feedback</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

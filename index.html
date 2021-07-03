@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <title>Search</title>
+        <script src="myScript.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css"/>
+        <style>
+            .container {
+                margin-top: 150px;
+            }
+            footer {
+                height: 50px;
+            }
+            @media (max-width: 650px) {
+                footer {
+                    height: 100px;
+                }
+                .links {
+                    justify-content: center;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul id="left">
+                    <li><a href="https://about.google">About</a></li>
+                    <li><a href="https://store.google.com">Store</a></li>
+                </ul>
+                <ul id="right">
+                    <li><a href="https://mail.google.com">Gmail</a></li>
+                    <li><a href="images.html">Images</a></li>
+                    <li><a href=""><img id="grid"
+                                src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png"
+                                title="Google apps"></a></li>
+                    <li><button type="button" class="btn btn-primary btn-sm">Sign in</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <form action="https://google.com/search">
+                    <img id="logo" src=googlelogo.png alt="Google logo">
+                    <div class="searchbar">
+                        <input type="text" name="q" required>
+                        <div class="icons">
+                            <img id="magnifier"
+                                src="https://upload.wikimedia.org/wikipedia/commons/2/22/Google_Magnifying_Glass.svg">
+                            <img id="voice"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png"
+                                title="Search by voice">
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <input id="search-buttons" type="submit" value="Google Search">
+                        <input id="search-buttons" type="submit" name="btnI" value="I'm Feeling Lucky">
+                    </div>
+                </form>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="links">
+                <ul id="left-footer">
+                    <li><a href="https://ads.google.com">Advertising</a></li>
+                    <li><a href="https://smallbusiness.withgoogle.com">Business</a></li>
+                    <li><a href="https://www.google.com/search/howsearchworks">How Search works</a></li>
+                </ul>
+                <ul id="right-footer">
+                    <li><a href="https://policies.google.com">Privacy</a></li>
+                    <li><a href="https://policies.google.com">Terms</a></li>
+                    <div class="dropup">
+                        <li><a onclick="myFunction()" href='#'>Settings</a></li>
+                        <div class="dropup-content" id="dropup-content">
+                            <a href="https://www.google.com/preferences">Search settings</a>
+                            <a href="advanced.html">Advanced search</a>
+                            <a href="https://myactivity.google.com">Your data in Search</a>
+                            <a href="https://myactivity.google.com/item">Search history</a>
+                            <a href="https://support.google.com/websearch">Search help</a>
+                            <a href="#">Send feedback</a>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

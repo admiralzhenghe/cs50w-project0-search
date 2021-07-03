@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Advanced Search</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css"/>
+        <style>
+            nav {
+                background-color: #f2f2f2;
+            }
+
+            .logo {
+                width: 275px;
+                margin: auto;
+                margin-left: -75px;
+            }
+
+            main {
+                display: flex;
+                padding: 20px 0 0 50px;
+                flex-direction: column;
+                width: 100%;
+                flex-grow: 1;    
+            }
+
+            footer {
+                height: 40px;
+            }
+
+            .to {
+                grid-template-columns: minmax(50px, 1fr) 50px minmax(50px, 1fr);
+            }
+
+            @media (max-width: 900px) {
+                .find .right, .narrow .right{
+                    visibility: hidden;
+                }
+            }
+
+            #find {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                font-size: 16px;
+            }
+            
+            #narrow {
+                grid-column: span 3;
+                font-size: 16px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html"><img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"></a>
+                </div>
+                <ul>      
+                    <li><a href=""><img id="grid"
+                                src="https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-11-512.png"
+                                title="Google apps"></a></li>
+                    <li><button type="button" class="btn btn-primary btn-sm">Sign in</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="advanced-search">Advanced Search</div>
+            <form action="https://google.com/search?">
+                <div class="find">
+                    <div id="find" class="left">Find pages with...</div>
+                    <div class="right" style="font-size: 13px;"><b>To do this in the search box</b></div>
+        
+                    <div class="left">all these words:</div>
+                    <input type="text" name="q" size=>
+                    <div class="right">Type the important words: <span id="example">tricolor rat terrier</span></div>
+        
+                    <div class="left">this exact word or phrase:</div>
+                    <input type="text" name="as_epq" size=>
+                    <div class="right">Put exact words in quotes: <span id="example">"rat terrier"</span></div>
+        
+                    <div class="left">any of these words:</div>
+                    <input type="text" name="as_oq" size=>
+                    <div class="right">Type OR between all the words you want:<br><span id="example">miniature OR standard</span></div>
+        
+                    <div class="left">none of these words:</div>
+                    <input type="text" name="as_eq" size=>
+                    <div class="right">Put a minus sign just before words you don't want:<br><span id="example">-rodent, -"Jack Russell"</span></div>
+        
+                    <div class="left">numbers ranging from:</div>
+                    <div class="to" style="display: grid;">
+                        <input type="text" name="as_nlo" size=>
+                        <div style="font-size: 13px; justify-self: center; align-self: center; ">to</div>
+                        <input  type="text" name="as_nhi" size=>
+                    </div>
+                    <div class="right">Put 2 periods between the numbers and add a unit of measure:<br><span id="example">10..35 lb, $300..$500, 2010..2011</span></div>
+                </div>
+
+                <div class="narrow">
+                    <div id="narrow" class="left">Then narrow your results by...</div>
+                    <div class="left">language:</div>
+                    <select>
+                        <option selected="selected" value=empty>any language</option>
+                        <option value="afrikaans">Afrikaans</option>
+                        <option value="arabic">Arabic</option>
+                        <option value="armenian">Armenian</option>
+                    </select>
+                    <div class="right">Find pages in the language you select.</div>
+
+                    <div class="left">region:</div>
+                    <select>
+                        <option selected="selected" value="any-region">any region</option>
+                        <option value="afghanistan">Afghanistan</option>
+                        <option value="albania">Albania</option>
+                        <option value="algeria">Algeria</option>
+                    </select>
+                    <div class="right">Find pages published in a particular region.</div>
+
+                    <div class="left">last update:</div>
+                    <select>
+                        <option selected="selected" value="anytime">anytime</option>
+                        <option value="past-24hours">past 24 hours</option>
+                        <option value="past-week">past week</option>
+                        <option value="past-month">past month</option>
+                        <option value="past-year">past year</option>
+                    </select>
+                    <div class="right">Find pages updated within the time you specify.</div>
+
+                    <div class="left">site or domain:</div>
+                    <input type="text"></input>
+                    <div class="right">Search one site (like  wikipedia.org ) or limit your results to a domain like .edu, .org or .gov</div>
+                    
+                    <div class="left">terms appearing:</div>
+                    <select>
+                        <option selected="selected" value="anywhere">anywhere in the page</option>
+                        <option value="title">in the title of the page</option>
+                        <option value="text">in the text of the page</option>
+                        <option value="URL">in the URL of the page</option>
+                        <option value="links">in the links to the page</option>
+                    </select>
+                    <div class="right">Search for terms in the whole page, page title, or web address, or links to the page you're looking for.</div>
+                    
+                    <div class="left">SafeSearch:</div>
+                    <select>
+                        <option selected="selected" value="show">Show explicit results</option>
+                        <option value="hide">Hide explicit results</option>
+                    </select>
+                    <div class="right">Tell SafeSearch whether to filter sexually explicit content.</div>
+                    
+                    <div class="left">file type:</div>
+                    <select>
+                        <option selected="selected" value="any">any format</option>
+                    </select>
+                    <div class="right">Find pages in the format you prefer.</div>
+
+                    <div class="left">usage rights:</div>
+                    <select>
+                        <option selected="selected" value="not filtered">not filtered by license</option>
+                    </select>
+                    <div class="right">Find pages you are free to use yourself.</div>
+                
+                    <div class="left"></div>
+                    <button type="submit"><b>Advanced Search</b></button>
+                    <div class="right"></div>
+                </div>
+            </form>
+            <div class="also">
+                <div>
+                    You can also...
+                </div>
+                <li><a href="https://support.google.com/websearch?p=adv_pages_similar&hl=en">Find pages that are similar to a URL</a></li>
+                <li><a href="https://support.google.com/websearch?p=adv_pages_visited&hl=en">Search pages you've visited</a></li>
+                <li><a href="https://support.google.com/websearch?p=adv_operators&hl=en">Use operators in the search box</a></li>
+                <li><a href="https://www.google.com/preferences?hl=en">Customize your search settings</a></li>
+            </div>
+        </main>
+
+        <footer>
+            <div class="links">
+                <ul id="left-footer">
+                    <li><a href="https://support.google.com">Help</a></li>
+                    <li><a href="https://policies.google.com/privacy">Privacy</a></li>
+                    <li><a href="https://policies.google.com/terms">Terms</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
