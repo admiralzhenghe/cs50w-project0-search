@@ -4,56 +4,11 @@
         <title>Google Advanced Search</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css"/>
-        <style>
-            nav {
-                background-color: #f2f2f2;
-            }
-
-            .logo {
-                width: 275px;
-                margin: auto;
-                margin-left: -75px;
-            }
-
-            main {
-                display: flex;
-                padding: 20px 0 0 50px;
-                flex-direction: column;
-                width: 100%;
-                flex-grow: 1;    
-            }
-
-            footer {
-                height: 40px;
-            }
-
-            .to {
-                grid-template-columns: minmax(50px, 1fr) 50px minmax(50px, 1fr);
-            }
-
-            @media (max-width: 900px) {
-                .find .right, .narrow .right{
-                    visibility: hidden;
-                }
-            }
-
-            #find {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                font-size: 16px;
-            }
-            
-            #narrow {
-                grid-column: span 3;
-                font-size: 16px;
-            }
-
-        </style>
     </head>
     <body>
         <header>
-            <nav>
-                <div class="logo">
+            <nav class="as-nav">
+                <div class="as-logo">
                     <a href="index.html"><img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"></a>
                 </div>
                 <ul>      
@@ -64,12 +19,11 @@
                 </ul>
             </nav>
         </header>
-
-        <main>
+        <main class="as-main">
             <div class="advanced-search">Advanced Search</div>
             <form action="https://google.com/search?">
                 <div class="find">
-                    <div id="find" class="left">Find pages with...</div>
+                    <div class="left">Find pages with...</div>
                     <div class="right" style="font-size: 13px;"><b>To do this in the search box</b></div>
         
                     <div class="left">all these words:</div>
@@ -98,7 +52,7 @@
                 </div>
 
                 <div class="narrow">
-                    <div id="narrow" class="left">Then narrow your results by...</div>
+                    <div class="left">Then narrow your results by...</div>
                     <div class="left">language:</div>
                     <select>
                         <option selected="selected" value=empty>any language</option>
@@ -175,8 +129,7 @@
                 <li><a href="https://www.google.com/preferences?hl=en">Customize your search settings</a></li>
             </div>
         </main>
-
-        <footer>
+        <footer class="as-footer">
             <div class="links">
                 <ul id="left-footer">
                     <li><a href="https://support.google.com">Help</a></li>

@@ -39,6 +39,9 @@ nav a:hover {
     border-radius: 30px;
     box-shadow: 0px 0px 0px 10px lightgrey;
 }
+.search-container {
+    margin-top: 150px;
+}
 #magnifier {
     width: 1.5em;
 }
@@ -51,19 +54,18 @@ nav a:hover {
     margin: 0 auto;
     width: 60%;
 }
-main {
-    display: flex;
-    flex-grow: 1;
+.index-main {
+    flex-grow: 1
 }
 .searchbar {
     margin: .75rem 0;
 }
 .searchbar > input {
-    margin-top: 10px;
     border: 1px solid lightgrey;
     border-radius: 30px;
     height: 3rem;
     width: 100%;
+    margin-top: 10px;
     outline: none;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -99,17 +101,17 @@ main {
 #search-buttons:hover {
     box-shadow: 0 0 6px gray;
 }
-footer {
-    display: flex;
-    width: 100vw;
-    background-color: #f2f2f2;
-}
 .links {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
+}
+footer {
+    display: flex;
+    width: 100vw;
+    background-color: #f2f2f2;
 }
 footer ul {
     display: flex;
@@ -121,6 +123,9 @@ footer ul li {
     padding-right: 25px;
     list-style: none;
 }
+.index-footer {
+    height: 50px;
+}
 .links ul:nth-child(1) li:nth-child(1) {
     padding-left: 25px;
 }
@@ -129,12 +134,12 @@ footer ul li {
     font-size: 14px;
 }
 .dropup-content {
+    background-color: white;
+    border: 1px solid lightgrey;
     display: none;
-    position: absolute;
     height: auto;
     width: 170px;
-    border: 1px solid lightgrey;
-    background-color: white;
+    position: absolute;
     right: 25px;
     bottom: 15px;
 }
@@ -168,8 +173,8 @@ footer ul li {
     color: gray;
 }
 .dropup-content-images a:hover {
-    border-radius: 5px;
     background-color: rgb(240, 240, 240);
+    border-radius: 5px;
 }
 .dropup-content.show {
     display: block;
@@ -178,7 +183,74 @@ footer ul li {
     display: block;
 }
 
+/* CSS for Images */
+.images-main {
+    flex-grow: 1;
+    width: 100%;
+}
+.images-nav {
+    justify-content: flex-end;
+}
+.images-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+.images-container form {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin-top: 150px;
+}
+.images-container form > div {
+    width: 50%;
+}
+.images-logo {
+    height: 125px;
+    width: auto;
+}
+.images-logo-container {
+    display: flex;
+    justify-content: center;
+}
+.left-icons {
+    display: flex;
+    align-items: center;
+}
+.left-icons img {
+    height: 18px;
+    width: auto;
+    padding-right: 20px;
+}
+#images-magnifier {
+    height: 22px;
+    width: auto;
+    pointer-events: auto;
+}
+.images-footer {
+    height: 40px;
+}
+
 /* CSS for Advanced Search */
+.as-main {
+    display: flex;
+    padding: 20px 0 0 50px;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;    
+}
+.as-logo {
+    width: 275px;
+    margin: auto;
+    margin-left: -75px;
+}
+.as-nav {
+    background-color: #f2f2f2;
+}
+
 .advanced-search {
     font-size: 20px;
     color: chocolate;
@@ -194,6 +266,11 @@ footer ul li {
     grid-template-rows: repeat(6, 45px);
     padding-bottom: 25px;
     border-bottom: 1px solid lightgray;
+}
+.find .left:nth-child(1) {
+    font-size: 16px;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 .left {
     align-self: center;
@@ -213,6 +290,9 @@ footer ul li {
 .find div p {
     align-self: center;
 }
+.to {
+    grid-template-columns: minmax(50px, 1fr) 50px minmax(50px, 1fr);
+}
 .narrow {
     display: grid;
     grid-template-columns: 170px minmax(250px, 575px) 400px;
@@ -220,6 +300,10 @@ footer ul li {
     padding-top: 10px;
     padding-bottom: 35px;
     border-bottom: 1px solid lightgray;
+}
+.narrow .left:first-child {
+    font-size: 16px;
+    grid-column: span 3;
 }
 .narrow select {
     align-self: center;
@@ -259,4 +343,26 @@ footer ul li {
 }
 .also li a {
     color: blue;
+}
+.as-footer {
+    height: 40px;
+}
+
+/* Media */
+@media (max-width: 650px) {
+    .index-footer {
+        height: 100px;
+    }
+    .images-footer {
+        height: 90px;
+    }
+    .links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .find .right, .narrow .right{
+        visibility: hidden;
+    }
 }

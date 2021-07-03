@@ -1,30 +1,12 @@
 <!DOCTYPE html>
 <html lang="eng">
-
     <head>
         <title>Search</title>
         <script src="myScript.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css"/>
-        <style>
-            .container {
-                margin-top: 150px;
-            }
-            footer {
-                height: 50px;
-            }
-            @media (max-width: 650px) {
-                footer {
-                    height: 100px;
-                }
-                .links {
-                    justify-content: center;
-                }
-            }
-        </style>
     </head>
-
     <body>
         <header>
             <nav>
@@ -42,9 +24,8 @@
                 </ul>
             </nav>
         </header>
-
-        <main>
-            <div class="container">
+        <main class="index-main">
+            <div class="search-container">
                 <form action="https://google.com/search">
                     <img id="logo" src=..\images\googlelogo.png alt="Google logo">
                     <div class="searchbar">
@@ -64,8 +45,7 @@
                 </form>
             </div>
         </main>
-        
-        <footer>
+        <footer class="index-footer">
             <div class="links">
                 <ul id="left-footer">
                     <li><a href="https://ads.google.com">Advertising</a></li>
